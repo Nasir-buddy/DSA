@@ -14,7 +14,7 @@ public class Edit_Distance_DP {
         }
         for(int i = 1; i <= m; i++){
             for(int j = 1 ; j <= n; j++){
-                if(s.charAt(m - i) == t.charAt(n - i)){
+                if(s.charAt(m - i) == t.charAt(n - j)){
                     storage[i][j] = storage[i - 1][j - 1];
                 }else{
                     storage[i][j] = 1 + Math.min(storage[i][j - 1], Math.min(storage[i - 1][j] , storage[i - 1][j - 1]));
