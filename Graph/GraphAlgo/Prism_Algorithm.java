@@ -5,7 +5,7 @@ import java.util.*;
 public class Prism_Algorithm {
 
     private static int findminVertex(int weight[], boolean visited[]){
-        int minVertex = 1;
+        int minVertex = -1;
         for(int i = 0 ; i < weight.length; i++){
             // we check min vertex -1 to avoid array out of bound exception
             if(!visited[i] && (minVertex == - 1 || weight[i] < weight[minVertex])){
