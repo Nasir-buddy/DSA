@@ -5,10 +5,7 @@ import java.util.Scanner;
 public class TicTacToe {
     private player player1, player2;
     private Board board;
-    public static void main(String args[]){
-        TicTacToe t = new TicTacToe();
-        t.startGame();
-    }
+    
     public void startGame(){
         Scanner sc = new Scanner(System.in);
                                 //player input 
