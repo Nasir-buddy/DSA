@@ -1,5 +1,7 @@
 package DSA.Backtracking;
 
+import java.util.Scanner;
+
 public class Rat_in_a_Maze {
     public static boolean ratInAMaze(int maze[][]) {
         int n = maze.length;
@@ -44,7 +46,16 @@ public class Rat_in_a_Maze {
     }
 
     public static void main(String[] args) {
-        int maze[][] = { { 1, 1, 0 }, { 1, 0, 1 }, { 0, 1, 1 } };
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the 2 D array ");
+        int n = sc.nextInt();
+        int maze[][] = new int[n][n];
+        for(int i = 0 ; i < n; i++){
+            for(int j = 0; j < n; j++){
+                System.out.print("Enter the maze element in only 0 and 1 " + i + " " + j + " : ");
+                maze[i][j] = sc.nextInt();
+            }
+        }
         boolean pathPossible = ratInAMaze(maze);
         System.out.println(pathPossible);
     }
