@@ -3,6 +3,7 @@ package DSA.Array.Algo;
 import java.util.Scanner;
 
 public class Binary_Search {
+    static Scanner sc = new Scanner(System.in);
     public static int BSearch(int input[], int elem) {
         int start = 0;
         int end = input.length - 1;
@@ -20,7 +21,6 @@ public class Binary_Search {
     }
 
     public static int[] takeinput() {
-        Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int input[] = new int[size];
         for (int i = 0; i < size; i++) {
@@ -40,8 +40,11 @@ public class Binary_Search {
 
     public static void main(String[] args) {
         int arr[] = takeinput();
-        print(arr);
-        int output = BSearch(arr, 4);
+        System.out.print("Printing the default array.... : ");
+        print(arr);     
+        System.out.print("Enter the element that you want to find : ");
+        int element = sc.nextInt();
+        int output = BSearch(arr, element);
         System.out.println(output);
     }
 }
