@@ -2,15 +2,13 @@ package DSA.Array.Algo;
 
 import java.util.Scanner;
 
-import javax.lang.model.element.Element;
-
 public class Binary_Search {
     public static int BSearch(int input[], int elem) {
         int start = 0;
         int end = input.length - 1;
         while (start <= end) {
             int mid = (start + end) / 2;
-            if (elem == mid) {
+            if (elem == input[mid]) {
                 return mid;
             } else if (elem > input[mid]) {
                 start = mid + 1;
@@ -43,7 +41,7 @@ public class Binary_Search {
     public static void main(String[] args) {
         int arr[] = takeinput();
         print(arr);
-        BSearch(takeinput() , 4);
-        print(arr);
+        int output = BSearch(arr, 4);
+        System.out.println(output);
     }
 }
