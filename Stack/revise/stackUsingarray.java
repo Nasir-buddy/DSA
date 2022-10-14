@@ -20,7 +20,7 @@ public class stackUsingarray {
    }
 
    public boolean isEmpty(){
-      return (top == -1);
+      return  (top == -1);
    }
 
    public int size(){
@@ -66,11 +66,11 @@ public class stackUsingarray {
    public void doubleCapacity(){
       int temp[] = data;
       data = new int[2 * temp.length];
-      for(int i = 0 ; i < top ; i++){
+      for(int i = 0 ; i <= top ; i++){
          data[i] = temp[i];
       } 
    }
-   public void display(){
+      public void display(){
       System.out.println("Printing the stack......");
       for(int i = top; i >= 0; i--){
          System.out.println(data[i]);
