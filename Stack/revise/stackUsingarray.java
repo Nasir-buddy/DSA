@@ -24,7 +24,6 @@ public class stackUsingarray {
    }
 
    public int size(){
-      System.out.println(top + 1);
       return top + 1;
    }
 
@@ -82,9 +81,9 @@ public class stackUsingarray {
       System.out.print("******Stack Using Array******");
       System.out.println("\n-----------------------------");
       int choice = 0; 
-      while(choice != 6){
+      while(choice != 7){
          System.out.println("Choose from the below option.");
-         System.out.println(" 1. Push \n 2. Pop \n 3. Display \n 4. Top \n 5. size \n 6. Exit");
+         System.out.println(" 1. Push \n 2. Pop \n 3. Display \n 4. Top \n 5. size \n 6. isEmpty \n 7. Exit.");
          System.out.println("Enter your choice : ");
          choice = sc.nextInt();
          switch(choice){
@@ -111,10 +110,20 @@ public class stackUsingarray {
             case 5:
             {
                stack.size();
+               System.out.println("Size of the stack is : " + stack.size());
                break;
             }
             case 6:
             {
+               stack.isEmpty();
+               if(stack.isEmpty()){
+                  System.out.println("Stack is Empty... ");
+               } else {
+                  System.out.println("Stack is not Empty...");
+               }
+               break;
+            }
+            case 7: {
                System.out.println("Exiting program Successfully!!!!!");
                System.exit(0);   
                break;
@@ -122,6 +131,7 @@ public class stackUsingarray {
             default : 
             {
                System.out.print("Please enter the valid choice.....");
+               break;
             }
          }
       }
