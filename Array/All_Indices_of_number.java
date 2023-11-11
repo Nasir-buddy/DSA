@@ -1,5 +1,7 @@
 package DSA.Array;
+
 import java.util.Scanner;
+
 public class All_Indices_of_number {
     static Scanner s = new Scanner(System.in);
 
@@ -9,8 +11,7 @@ public class All_Indices_of_number {
 
     public static int[] allIndexes(int input[], int x, int startIndex) {
         if (startIndex == input.length) {
-            int output[] = new int[0];
-            return output;
+            return new int[0];
         }
 
         int smallAns[] = allIndexes(input, x, startIndex + 1);
@@ -21,9 +22,8 @@ public class All_Indices_of_number {
                 answer[i + 1] = smallAns[i];
             }
             return answer;
-        } else {
-            return smallAns;
         }
+        return smallAns;
     }
 
     public static int[] takeInput() {
