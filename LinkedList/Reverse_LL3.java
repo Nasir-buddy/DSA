@@ -1,11 +1,14 @@
 package DSA.LinkedList;
 import java.util.Scanner;
 public class Reverse_LL3 {
+	
     public static Node<Integer> reverseRLL_Better3(Node<Integer> head){
+	// base case    
 		if(head == null || head.next == null)
         {
             return head; 
         }
+	    // creating new ll nad initialize from head
             Node<Integer> reversedTail = head.next;
             Node<Integer> smallhead= reverseRLL_Better3(head.next);
             reversedTail.next = head;
