@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Get_Path_By_DFS {
+    // getting path by DFS
     public static ArrayList<Integer> getPathDFS(int edges[][] , boolean visited[] , int V1 , int V2){
         if(V1 == V2){
             ArrayList<Integer> ans = new ArrayList<>();
@@ -21,6 +22,7 @@ public class Get_Path_By_DFS {
         }
         return null;
     }
+    // main function 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the vertex : ");
